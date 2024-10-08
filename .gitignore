@@ -8,6 +8,10 @@ node_modules/
 dist/
 web-build/
 
+# Build files
+*.apk
+*.aab
+
 # Native
 *.orig.*
 *.jks

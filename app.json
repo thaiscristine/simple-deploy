@@ -2,6 +2,11 @@
   "expo": {
     "name": "simple-deploy",
     "slug": "simple-deploy",
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "extra": {
+      "eas": {
+        "projectId": "f57fd39f-1965-486e-9c94-3e9e2eec22a1"
+      }
+    }
   }
 }
