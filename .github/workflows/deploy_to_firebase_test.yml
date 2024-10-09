@@ -49,8 +49,13 @@ jobs:
 
       - name: Clean Gradle Build Cache
         working-directory: android
-        run: ./gradlew clean
+        run: rm -rf $HOME/.gradle/caches/
 
+      - name: Set Gradle options
+        env:
+          GRADLE_OPTS: "-Xmx4g"
+        run: echo "GRADLE_OPTS='$GRADLE_OPTS'" >> $GITHUB_ENV
+      
       - name: Execute Gradle command - assembleDebug (Build APK)
         working-directory: android
         run: ./gradlew assembleDebug
@@ -61,5 +66,5 @@ jobs:
           appId: ${{ secrets.FIREBASE_APP_ID }}
           serviceCredentialsFileContent: ${{ secrets.CREDENTIAL_FILE_CONTENT }}
           groups: testers
-          file: app/build/outputs/apk/debug/app-debug.apk
+          file: android/app/build/outputs/apk/debug/app-debug.apk
           releaseNotes: ${{ inputs.release_notes }}
