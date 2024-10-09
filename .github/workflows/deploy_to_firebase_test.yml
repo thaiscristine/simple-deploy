@@ -52,13 +52,13 @@ jobs:
         run: rm -rf $HOME/.gradle/caches/
 
       - name: Set Gradle options
-        env:
-          GRADLE_OPTS: "-Xmx4g"
-        run: echo "GRADLE_OPTS='$GRADLE_OPTS'" >> $GITHUB_ENV
+        run: |
+          echo "GRADLE_OPTS=-Xmx4g" >> $GITHUB_ENV
+          echo "_JAVA_OPTIONS=-Xmx4g" >> $GITHUB_ENV
       
       - name: Execute Gradle command - assembleDebug (Build APK)
         working-directory: android
-        run: ./gradlew assembleDebug
+        run: ./gradlew assembleDebug --no-daemon
 
       - name: Upload Artifact to Firebase App Distribution
         uses: wzieba/Firebase-Distribution-Github-Action@v1
