@@ -1,4 +1,4 @@
-package com.simpledeploy
+package com.thaiscristine.simpledeploy
 
 import android.app.Application
 import android.content.res.Configuration

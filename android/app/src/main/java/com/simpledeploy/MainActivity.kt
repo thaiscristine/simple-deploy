@@ -1,4 +1,4 @@
-package com.simpledeploy
+package com.thaiscristine.simpledeploy
 
 import android.os.Build
 import android.os.Bundle

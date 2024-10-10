@@ -109,9 +109,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace "com.simpledeploy"
+    namespace "com.thaiscristine.simpledeploy"
     defaultConfig {
-        applicationId "com.simpledeploy"
+        applicationId "com.thaiscristine.simpledeploy"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
