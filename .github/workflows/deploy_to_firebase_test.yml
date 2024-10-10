@@ -57,7 +57,7 @@ jobs:
 
       - name: Build application
         run: |
-          cd android && ./gradlew assembleRelease --no-daemon
+          cd android && ./gradlew assembleDebug --no-daemon
 
       - name: Upload artifact to Firebase App Distribution
         uses: wzieba/Firebase-Distribution-Github-Action@v1
